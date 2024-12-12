@@ -1,0 +1,175 @@
+/* Загальні стилі для гри */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.board-row {
+    display: flex;
+}
+
+.square {
+    background: #8bc34a;
+    border: 2px solid #388e3c;
+    float: left;
+    height: 40px;
+    width: 40px;
+    margin: 2px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.square:focus {
+    outline: none;
+}
+
+.square:hover {
+    background: #aed581;
+}
+
+.square svg {
+    transition: transform 0.3s ease;
+}
+
+.square.animate {
+    transform: scale(1.2);
+}
+
+.square.animate svg {
+    transform: scale(1.2);
+}
+
+.board {
+    width: 360px;
+    margin: 20px auto;
+    display: block;
+    background-color: #4caf50;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#status {
+    font-family: "Verdana", Geneva, Tahoma, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    background-color: #388e3c;
+    border-radius: 6px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#root {
+    background-color: #f0f0f0;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scores {
+    border: 1px solid #388e3c;
+    width: 200px;
+    height: 80px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #dfdfdf;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.scores > .black-score,
+.scores > .white-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scores > .black-score svg,
+.scores > .white-score svg {
+    margin-bottom: -15px;
+}
+
+#restart {
+    display: block;
+    width: 100px;
+    height: 30px;
+    background-color: #388e3c;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#undo {
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin: 10px auto;
+    background-color: #388e3c;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#undo:hover,
+#restart:hover {
+    background-color: #4caf50;
+}
+
+.select-mode {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.select-mode > #one-player {
+    display: block;
+}
+
+.select-mode > #restart {
+    display: block;
+}
+
+.select-mode > select {
+    display: block;
+    width: 120px;
+    height: 30px;
+    background-color: #388e3c;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-size: 16px;
+}
+
+.select-mode > select:hover {
+    background-color: #4caf50;
+}
